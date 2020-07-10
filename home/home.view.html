@@ -1,0 +1,10 @@
+﻿<h1>{{'hi' | translate }} {{vm.user.firstName}}!</h1>
+<h3>{{'allUsers' | translate }}</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="vm.deleteUser(user.id)">{{'delete' | translate }}</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#!/login" class="btn btn-primary logout-btn">{{'logout' | translate }}</a></p>
